@@ -16,5 +16,8 @@ jobs:
               run: node --version
             - name: "clone github repo"
               uses: actions/checkout@v2
+            - name: "install dependencies"
+
+              run: npm install
                 
             
