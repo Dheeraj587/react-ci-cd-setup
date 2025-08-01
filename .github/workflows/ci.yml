@@ -14,5 +14,7 @@ jobs:
                 node-version: '21'
             - name: "check node version"
               run: node --version
+            - name: "clone github repo"
+              uses: actions/checkout@v2
                 
             
