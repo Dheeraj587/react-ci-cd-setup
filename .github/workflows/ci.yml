@@ -23,6 +23,14 @@ jobs:
               run: npm install
             - name: "list directories"
               run: ls
+            - name: "run build"
+              run: npm run build
+            
+            - name: "upload product-ready build files"
+              uses: actions/upload-artifact@v4
+              with:
+                name: build
+                path: assets
 
             
             
