@@ -20,7 +20,7 @@ jobs:
               run: npm i -g vercel
 
             - name: "download build files"
-              uses: actions/download-artifacts@v4
+              uses: actions/download-artifact@v4
               with:
                 name: build
                 run-id: ${{ github.event.workflow_run.id }}
