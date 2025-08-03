@@ -4,6 +4,7 @@ on:
         workflows: ["sample react ci pipeline"]
         types:
             - completed
+    workflow_dispatch:
 
 jobs: 
     deploy:
