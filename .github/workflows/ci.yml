@@ -12,8 +12,10 @@ jobs:
               uses: actions/setup-node@v4
               with:
                 node-version: '21'
+                
             - name: "check node version"
               run: node --version
+
             - name: "clone github repo"
               uses: actions/checkout@v2
             - name: "install dependencies"
@@ -21,5 +23,11 @@ jobs:
               run: npm install
             - name: "list directories"
               run: ls
+
+            - name: "run test"
+              run: npm test
+
+            - name: "run build"
+              run: npm run build
                 
             
