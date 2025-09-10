@@ -1,6 +1,15 @@
 pipeline{
     agent any
     stages{
+        stage('Install Dependencies') {
+    steps {
+        sh '''
+          npm config set cache $(pwd)/.npm --global
+          npm install
+        '''
+    }
+}
+
         stage('Build') {
             agent {
                 docker {
@@ -19,5 +28,6 @@ pipeline{
                 '''
             }
         }
+        
     }
 }
