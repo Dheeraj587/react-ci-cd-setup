@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage('take approval') {
             steps {
-                timeout(time: 1, unit: 'HOURS') {
+                timeout(time: 1, unit: 'MINUTES') {
                     input message: 'do you want to proceed?' , ok: 'proceed'
                 }
             }
