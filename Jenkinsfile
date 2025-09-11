@@ -3,7 +3,9 @@ pipeline{
     stages{
         stage('take approval') {
             steps {
-                input 'should we deploy?'
+                timeout(time: 1, unit: 'HOURS') {
+                    input message: 'do you want to proceed?' , ok: 'proceed'
+                }
             }
         }
         
